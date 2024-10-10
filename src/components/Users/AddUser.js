@@ -15,13 +15,19 @@ const AddUser = () => {
       setenteredAge(event.target.value);
     }
 
+    
     const addUserHandler = (event) => {
         event.preventDefault();
         const userDetails = {
         name : enteredname,
         age :  enteredage,
     }
-    console.log(enteredname,enteredage);
+    if(enteredname.length===0||enteredage<=0){
+        return;
+    }else{
+
+        console.log(enteredname,enteredage);
+    }
     setenteredName("");
     setenteredAge("");
 }

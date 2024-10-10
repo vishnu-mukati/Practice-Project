@@ -1,3 +1,6 @@
+import Card from "./UI/Card";
+import Button from "./UI/Button";
+import "./AddUser.css";
 
 const AddUser = () => {
 
@@ -6,19 +9,15 @@ const AddUser = () => {
     }
 
     return (
-        <form onSubmit={addUserHandler}>
-            <div>
-                <label htmlFor="username">UserName</label>
-                <input type="text" id="username" />
-            </div>
-            <div>
-                <label htmlFor="age">Age</label>
-                <input type="number" id="age" />
-            </div>
-            <div>
-                <button type="submit">Add User</button>
-            </div>
-        </form>
+        <Card  className = "input">
+            <form onSubmit={addUserHandler}>
+                    <label htmlFor="username">UserName</label>
+                    <input type="text" id="username" />
+                    <label htmlFor="age">Age</label>
+                    <input type="number" id="age" />
+                    <Button type="submit">Add User</Button>
+            </form>
+        </Card>
     );
 }
 

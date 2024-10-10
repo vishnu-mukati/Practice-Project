@@ -1,6 +1,7 @@
-import AddUser from "./components/AddUser";
+import AddUser from "./components/Users/AddUser";
 
 const App = () => {
+
   return (
     <div>
       <AddUser />
